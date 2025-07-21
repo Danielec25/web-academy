@@ -1,0 +1,67 @@
+/* Estilo geral da página */
+body {
+    background-color: #000000;
+    color: #f0f0f0; /* Cor padrão do texto */
+    font-family: Arial, sans-serif;
+    
+    /* Centraliza o card na tela usando Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Adiciona um respiro nas bordas da tela */
+}
+
+/* O container principal do conteúdo */
+.card {
+    display: flex; /* Alinha os filhos (texto e imagem) lado a lado */
+    align-items: center; /* Centraliza os itens verticalmente */
+    background-color: #0c0c0c;
+    max-width: 950px; /* Largura máxima do card */
+    
+    /* A "mágica" da borda estilizada */
+    border: 18px solid transparent;
+    border-image: linear-gradient(45deg, #c08c00, #ffeb8a, #c08c00) 1;
+    padding: 30px;
+}
+
+/* Container da parte do texto */
+.container-texto {
+    flex: 1; /* Permite que o texto ocupe o espaço disponível */
+    padding-right: 30px; /* Espaçamento entre o texto e a imagem */
+}
+
+/* Estilo do título principal */
+.container-texto h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    color: #ffd700; /* Cor dourada */
+    margin: 0;
+}
+
+/* Estilo da linha decorativa */
+.container-texto hr {
+    border: 0;
+    height: 2px;
+    background-color: #ffd700;
+    margin: 20px 0;
+}
+
+/* Estilo do parágrafo */
+.container-texto p {
+    font-size: 1.1em;
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+/* Container da imagem */
+.container-imagem {
+    flex: 1;
+}
+
+/* Estilo da imagem para se ajustar ao container */
+.container-imagem img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove espaços extras abaixo da imagem */
+}

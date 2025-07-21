@@ -1,0 +1,69 @@
+/* Estilos para centralizar nosso grid na página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* 1. Definindo o Container do Grid */
+.grid-container {
+    display: grid;
+    
+    /* Cria 3 colunas de larguras iguais */
+    grid-template-columns: repeat(3, 1fr);
+    
+    /* Cria 3 linhas de alturas iguais */
+    grid-template-rows: repeat(3, 1fr);
+    
+    /* Define o tamanho do nosso container */
+    width: 80vw; /* 80% da largura da tela */
+    max-width: 800px;
+    height: 70vh; /* 70% da altura da tela */
+    max-height: 600px;
+
+    /* Espaçamento entre os blocos */
+    gap: 15px;
+}
+
+/* Estilo geral para todos os blocos */
+.item {
+    border-radius: 8px;
+}
+
+/* 2. Posicionando cada item no Grid */
+
+.item-red {
+    background-color: #8B0000; /* darkred */
+    /* Começa na linha de coluna 1 e se expande até a linha 3 (ocupa 2 colunas) */
+    grid-column: 1 / 3;
+}
+
+.item-blue {
+    background-color: #000080; /* navy */
+    /* Ocupa apenas a terceira coluna */
+    grid-column: 3 / 4;
+}
+
+.item-green {
+    background-color: #006400; /* darkgreen */
+    /* Ocupa a primeira coluna da segunda linha */
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.item-purple {
+    background-color: #4B0082; /* indigo */
+    /* Começa na coluna 2 e vai até o final (ocupa 2 colunas) */
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.item-orange {
+    background-color: #FF8C00; /* darkorange */
+    /* Começa na coluna 1 e vai até o final (ocupa as 3 colunas) */
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}

@@ -1,0 +1,60 @@
+/* Estilo para o body, para centralizar o nosso layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Container principal
+  - Usa flex para alinhar a caixa azul e a coluna da direita lado a lado.
+*/
+.container {
+    display: flex;
+}
+
+/* Estilos individuais das caixas (cores e dimensões)
+  As dimensões foram definidas para recriar o layout final.
+*/
+.blue {
+    background-color: blue;
+    width: 200px;
+    height: 400px;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
+
+.red {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+.green {
+    background-color: green;
+    width: 400px; /* Ocupa a largura da amarela + vermelha */
+    height: 200px;
+}
+
+
+/* Coluna da Direita
+  - Este é um container flex aninhado.
+  - A direção 'column' empilha seus filhos (a linha de cima e a caixa verde) verticalmente.
+*/
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Linha de Cima (Amarela e Vermelha)
+  - Este é outro container flex aninhado.
+  - Ele alinha as caixas amarela e vermelha lado a lado.
+*/
+.top-right-row {
+    display: flex;
+}

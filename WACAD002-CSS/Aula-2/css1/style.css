@@ -1,0 +1,39 @@
+/* Estilo para o corpo da página */
+body {
+    /* Usamos Flexbox para centralizar o item facilmente */
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;    /* Centraliza na vertical */
+    
+    /* Garante que o body ocupe a altura total da tela */
+    min-height: 100vh; 
+    margin: 0;
+
+    /* Uma cor de fundo suave para a página, como na imagem de exemplo */
+    background-color: #f0f0f0; 
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para a caixa de texto destacada */
+.caixa-destaque {
+    background-color: #4a4a4a; /* Fundo cinza escuro */
+    color: white;              /* Texto branco */
+    border: 8px solid black;   /* Borda preta e espessa */
+    
+    /* O grande segredo para a forma: um border-radius generoso */
+    border-radius: 80px;
+    
+    /* Sombra para dar o efeito de elevação */
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.4);
+    
+    /* Espaçamento interno para o texto não colar nas bordas */
+    padding: 30px 50px;
+    
+    /* Define uma largura máxima para a caixa */
+    max-width: 500px;
+
+    /* Alinha o texto ao centro */
+    text-align: center;
+    font-size: 1.2em; /* Tamanho da fonte um pouco maior */
+    line-height: 1.6; /* Espaçamento entre as linhas para melhor leitura */
+}
