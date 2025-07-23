@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista 02 - Questão 1</title>
+    <style>
+      
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 40px;
+        }
+
+        
+        h1 {
+            text-align: center;
+            color: #1d2d3f;
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+
+       
+        #lista-titulo {
+            font-size: 1.1em;
+            color: #586069;
+            margin-bottom: 10px;
+        }
+
+        
+        #lista-itens-1 {
+            list-style-type: none; 
+            padding: 0;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+        }
+        
+       
+        #lista-itens-1 li {
+            padding: 15px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        
+        #lista-itens-1 li:last-child {
+            border-bottom: none;
+        }
+
+        
+        .hot {
+            background-color: #fff8e1; 
+            font-weight: 600; 
+            color: #b7791f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista</h1>
+
+        <div>
+            <p id="lista-titulo" name="lista">Meus itens:</p>
+        </div>
+
+        <ul id="lista-itens-1">
+            <li id="one" class="hot">item a</li>
+            <li id="two" class="hot">item b</li>
+            <li id="three" class="hot">item c</li>
+            <li id="four">item d</li>
+        </ul>
+    </div>
+
+    <script>
+       
+        const lista1 = document.getElementById('lista-itens-1');
+        const itemTwo = document.getElementById('two');
+
+        // i) Imprima no console o primeiro e último filho elementos HTML da lista 1
+        console.log("Primeiro filho elemento da lista 1:", lista1.firstElementChild);
+        console.log("Último filho elemento da lista 1:", lista1.lastElementChild);
+
+        // ii) Imprima no console o elemento HTML pai da lista 1
+        console.log("Elemento pai da lista 1:", lista1.parentElement);
+        
+        // iii) Imprima no console todos os filhos elementos HTML da lista 1
+        console.log("Todos os filhos elementos da lista 1:", lista1.children);
+
+        // iv) Imprima no console os irmãos elemento HTML do item com id = 'two'
+        console.log("Irmão ANTERIOR do item 'two':", itemTwo.previousElementSibling);
+        console.log("Próximo irmão do item 'two':", itemTwo.nextElementSibling);
+    </script>
+</body>
+</html>

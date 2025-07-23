@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 4</title>
+    <style>
+        /* Estilos que você forneceu */
+        h1 {
+            width: 350px;
+            padding: 20px;
+        }
+        .lista {
+            width: 350px;
+            padding: 20px;
+            color: white;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Questao 03</h1>
+
+    <h3 id="lista-titulo">Meus itens:</h3>
+
+    <ul id="lista-itens">
+        <li id="one" class="hot">item a</li>
+        <li id="two" class="hot">item b</li>
+        <li id="three" class="hot">item c</li>
+        <li id="four">item d</li>
+    </ul>
+    
+    <script>
+        
+        const tituloH1 = document.querySelector('h1');
+      
+        tituloH1.style.backgroundColor = 'blue';
+
+        
+        const tituloH3 = document.getElementById('lista-titulo');
+        
+        tituloH3.classList.add('lista');
+
+        
+        const itensHot = document.querySelectorAll('.hot');
+       
+        itensHot.forEach(function(item) {
+           
+            item.style.fontWeight = 'bold';
+        });
+    </script>
+</body>
+</html>

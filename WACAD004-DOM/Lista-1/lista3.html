@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 3</title>
+</head>
+<body>
+    <h1>Listas</h1>
+
+    <p id="lista-titulo" name="lista">Minhas listas:</p>
+
+    <ul class="lista-itens-1">
+        <li id="one" class="hot">item a</li>
+        <li id="two" class="hot">item b</li>
+        <li id="three" class="hot">item c</li>
+        <li id="four">item d</li>
+    </ul>
+
+    <ul class="lista-itens-2">
+        <li id="one" class="hot">Banana</li>
+        <li id="two" class="hot">Maçã</li>
+        <li id="three" class="hot">Bolacha</li>
+        <li id="four">Café</li>
+    </ul>
+
+    <ul class="lista-itens-3">
+        <li id="one" class="hot">item a</li>
+        <li id="two" class="hot">item b</li>
+        <li id="three" class="hot">item c</li>
+        <li id="four">item d</li>
+    </ul>
+
+    <ul class="lista-itens-4">
+        <li id="one" class="hot">item a</li>
+        <li id="two" class="hot">item b</li>
+        <li id="three" class="hot">item c</li>
+        <li id="four">item d</li>
+    </ul>
+
+    <script>
+      
+        console.log("--- Todos os itens da lista-itens-2 ---");
+        
+        const todosItens2 = document.querySelectorAll('.lista-itens-2 li');
+
+        
+        todosItens2.forEach(function(item) {
+            console.log(item.textContent);
+        });
+
+       
+        console.log("\n--- Itens da lista-itens-2 com a classe 'hot' ---");
+       
+        const itensHot2 = document.querySelectorAll('.lista-itens-2 li.hot');
+
+        
+        itensHot2.forEach(function(item) {
+            console.log(item.textContent);
+        });
+    </script>
+
+</body>
+</html>
