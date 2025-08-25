@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Gerador de Histórias</title>
+
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fceef5;
+        text-align: center;
+        padding-top: 40px;
+      }
+      
+      
+      div {
+        margin-bottom: 20px;
+      }
+      
+      
+      
+      .input-container {
+        position: relative; 
+        max-width: 380px; 
+        margin: 0 auto 25px auto; 
+      }
+
+      
+      .input-container input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #f2b5d4;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box; 
+      }
+
+      .input-container label {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        color: #aaa;
+        background-color: white;
+        padding: 0 5px;
+        transition: all 0.2s ease-in-out;
+        pointer-events: none;
+      }
+      
+      .input-container input:focus + label,
+      .input-container input:not(:placeholder-shown) + label {
+        top: -10px;
+        font-size: 12px;
+        color: #c72c6b;
+      }
+      
+      .input-container input:focus {
+        outline: none;
+        border-color: #c72c6b;
+      }
+
+      
+      
+      .radio-group label {
+        font-weight: bold;
+        color: #c72c6b;
+        margin: 0 5px 0 15px;
+      }
+    
+      .randomize {
+        background-color: #0d6efd;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+    
+      .randomize:hover {
+        background-color: #0b5ed7;
+      }
+    
+      p.story {
+        background: #e75480;
+        color: #ffffff;
+        padding: 20px;
+        border-left: 5px solid #0d6efd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        visibility: hidden;
+        line-height: 1.5;
+        font-size: 18px;
+        max-width: 600px;
+        margin: 40px auto;
+        text-align: left;
+      }
+    
+      .dorama-image {
+        width: 150px;
+        height: 150px;
+        background-image: url('dorama.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        display: inline-block;
+        margin-bottom: 30px;
+        border: 4px solid white;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="dorama-image"></div>
+    
+    <div class="input-container">
+      <input id="customname" type="text" placeholder=" " />
+      <label for="customname">Digite um nome personalizado:</label>
+    </div>
+    
+    <div class="radio-group">
+      <label for="us">US</label>
+      <input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label>
+      <input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    
+    <div>
+      <button class="randomize">Gerar História</button>
+    </div>
+
+    <p class="story"></p>
+
+    <script src="main.js"></script>
+  </body>
+</html>

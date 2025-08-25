@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Instituto de Computação</title>
+    <style>
+        /* Estilos gerais para aproximar a aparência da imagem */
+        body {
+            font-family: serif;
+            max-width: 800px;
+            margin: 2em;
+        }
+
+        h1 {
+            font-family: serif;
+            font-weight: normal;
+            display: flex;
+            align-items: center; /* Alinha o texto e a imagem verticalmente */
+        }
+
+        h1 .html-text {
+            font-family: sans-serif; /* Fonte diferente para "HTML" como na imagem */
+            font-weight: bold;
+            margin: 0 0.25em; /* Pequeno espaçamento */
+        }
+
+        h1 img {
+            height: 40px; /* Ajusta a altura do logo */
+        }
+
+        /* Estilos da Tabela */
+        table {
+            border-collapse: collapse; /* Une as bordas das células */
+            width: 100%; /* Faz a tabela ocupar a largura disponível */
+            margin-top: 1em;
+        }
+
+        th, td {
+            border: 2px solid #333; /* Borda mais grossa como na imagem */
+            padding: 8px;
+            text-align: left;
+            vertical-align: middle; /* Alinha o conteúdo no meio verticalmente */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Fundo cinza claro para o cabeçalho */
+            font-weight: bold;
+        }
+        
+        /* Estilo para o texto das tags */
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        A Linguagem <span class="html-text">HTML</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="Logo do HTML5">
+    </h1>
+
+    <p>
+        HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.
+    </p>
+
+    <p>
+        Alguns dos recursos da linguagem HTML vistos até este momento:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Recursos</th>
+                <th>Tags associadas</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Links</td>
+                <td><code>&lt;a&gt;</code></td>
+                <td>Criar links entre paginas</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Listas</td>
+                <td><code>&lt;ul&gt;</code> e <code>&lt;li&gt;</code></td>
+                <td>Criar listas de itens ordenados</td>
+            </tr>
+            <tr>
+                <td><code>&lt;ol&gt;</code> e <code>&lt;li&gt;</code></td>
+                <td>Criar listas de itens nao ordenados</td>
+            </tr>
+            <tr>
+                <td>Imagens</td>
+                <td><code>&lt;img&gt;</code></td>
+                <td>Inserir imagens</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

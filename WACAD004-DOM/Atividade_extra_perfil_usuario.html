@@ -1,0 +1,96 @@
+<style>
+  .destaque {
+    border: 5px solid #ccc;
+    padding: 10px;
+  }
+  .destaque-preview {
+    border: 5px solid #4caf50;
+    padding: 10px;
+  }
+</style>
+
+<body>
+  <h1>Editar Perfil</h1>
+
+  <div id="editor">
+    <label>
+      Nome:
+      <input type="text" id="input-nome" placeholder="Digite seu nome" />
+    </label>
+    <br />
+    <label>
+      Habilidades
+      <input
+        type="text"
+        id="input-skills"
+        placeholder="Digite suas habilidades"
+      />
+    </label>
+    <br />
+    <br />
+    <button id="botao-salvar">Salvar</button>
+    <button id="botao-limpar">Limpar</button>
+  </div>
+
+  <hr />
+
+  <div id="preview" class="destaque">
+    <h2>Preview do Perfil</h2>
+    <p>Olá, me chamo <span id="preview-nome">---</span></p>
+    <p>
+      Minhas principais habilidades são: <span id="preview-skills">---</span>
+    </p>
+  </div>
+
+  <script>
+    
+    const nomeInput = document.getElementById('input-nome');
+    const skillsInput = document.getElementById('input-skills');
+    const salvarBtn = document.getElementById('botao-salvar');
+    const limparBtn = document.getElementById('botao-limpar');
+    
+    const previewDiv = document.getElementById('preview');
+    const previewNome = document.getElementById('preview-nome');
+    const previewSkills = document.getElementById('preview-skills');
+
+    function handleInputChange() {
+      previewNome.textContent = nomeInput.value || '---';
+      previewSkills.textContent = skillsInput.value || '---';
+
+      const isBothEmpty = !nomeInput.value && !skillsInput.value;
+
+      if (isBothEmpty) {
+        previewDiv.classList.remove('destaque-preview');
+        previewDiv.classList.add('destaque');
+      } else {
+        previewDiv.classList.remove('destaque');
+        previewDiv.classList.add('destaque-preview');
+      }
+    }
+
+
+    nomeInput.addEventListener('input', handleInputChange);
+    skillsInput.addEventListener('input', handleInputChange);
+
+    limparBtn.addEventListener('click', function() {
+      
+      nomeInput.value = '';
+      skillsInput.value = '';
+
+      
+      handleInputChange();
+    });
+
+    
+    salvarBtn.addEventListener('click', function() {
+      const nome = nomeInput.value;
+      const skills = skillsInput.value;
+
+      if (nome && skills) {
+        alert(`Perfil salvo!\nNome: ${nome}\nHabilidades: ${skills}`);
+      } else {
+        alert('Por favor, preencha todos os campos.');
+      }
+    });
+  </script>
+</body>

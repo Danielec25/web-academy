@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 5</title>
+    <style>
+        /* Adicionando estilos para que a troca de classe seja visível */
+        .hot {
+            background-color: #ffcccb; /* light red */
+        }
+        .cold {
+            background-color: #add8e6; /* light blue */
+        }
+    </style>
+</head>
+<body>
+    <h1>Listas</h1>
+
+    <p id="lista-titulo" name="lista">Minhas listas:</p>
+
+    <ul class="lista-itens-1">
+        <li id="one" class="hot">item a</li>
+        <li id="two" class="hot">item b</li>
+        <li id="three" class="hot">item c</li>
+        <li id="four">item d</li>
+    </ul>
+
+    <ul class="lista-itens-2">
+        <li id="one" class="hot">item a</li>
+        <li id="two" class="hot">item b</li>
+        <li id="three" class="hot">item c</li>
+        <li id="four">item d</li>
+    </ul>
+
+    <ul class="lista-itens-3">
+        <li id="one" class="hot">item a</li>
+        <li id="two" class="hot">item b</li>
+        <li id="three" class="hot">item c</li>
+        <li id="four">item d</li>
+    </ul>
+
+    <ul class="lista-itens-4">
+        <li id="one" class="hot">item a</li>
+        <li id="two" class="hot">item b</li>
+        <li id="three" class="hot">item c</li>
+        <li id="four">item d</li>
+    </ul>
+
+    <script>
+        
+        const itensDaLista2 = document.querySelectorAll('.lista-itens-2 li');
+
+        
+        itensDaLista2.forEach(function(item) {
+            
+            item.style.color = 'purple';
+
+            
+            if (item.classList.contains('hot')) {
+                
+                item.classList.remove('hot');
+                item.classList.add('cold');
+            }
+        });
+    </script>
+</body>
+</html>

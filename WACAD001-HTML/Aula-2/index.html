@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estrutura Semântica HTML5</title>
+    <style>
+        /* CSS para estilizar os elementos como no diagrama */
+        body {
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        /* Container principal para o layout com flexbox */
+        .page-container {
+            max-width: 400px;
+            margin: 2em auto;
+            border: 2px solid #eee;
+            padding: 10px;
+        }
+
+        .content-wrapper {
+            display: flex; /* Habilita o Flexbox para criar o layout lado a lado */
+            gap: 10px;     /* Espaço entre a barra lateral e o conteúdo principal */
+        }
+
+        header, nav, main, aside, footer, article, section, figure, p {
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        /* Cores do diagrama */
+        header { background-color: #f08080; } /* Rosa */
+        nav    { background-color: #98fb98; } /* Verde */
+        main   { background-color: #add8e6; flex: 3; } /* Azul Claro (ocupa 3 partes do espaço) */
+        aside  { background-color: #ffc0cb; flex: 1; } /* Rosa Claro (ocupa 1 parte do espaço) */
+        footer { background-color: #9370db; } /* Roxo */
+        article{ background-color: #afeeee; } /* Azul Bebê */
+        section{ background-color: #00bfff; } /* Azul Escuro */
+        figure { background-color: #fffacd; } /* Amarelo */
+        p      { background-color: #adff2f; } /* Verde-limão (ajustado para diferenciar) */
+
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <header>
+            &lt;header&gt;
+        </header>
+
+        <nav>
+            &lt;nav&gt;
+        </nav>
+
+        <div class="content-wrapper">
+            <aside>
+                &lt;aside&gt;
+            </aside>
+
+            <main>
+                &lt;main&gt;
+                <article>
+                    &lt;article&gt;
+                    <figure>
+                        &lt;figure&gt;
+                    </figure>
+                    <p>
+                        &lt;p&gt;
+                    </p>
+                </article>
+                <section>
+                    &lt;section&gt;
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            &lt;footer&gt;
+        </footer>
+    </div>
+
+</body>
+</html>
