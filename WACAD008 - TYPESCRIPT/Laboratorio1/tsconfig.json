@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2016",                     // Para qual versão do JS o código será compilado.
+    "module": "ES2015",                     // Sistema de módulos a ser usado.
+    "lib": ["DOM", "ES2015"],               // Bibliotecas que o TS deve conhecer (DOM = navegador).
+    "outDir": "Laboratorio1/dist",                      // Onde salvar os arquivos .js compilados para organizar o projeto.
+
+    /* Strict Type-Checking Options */
+    "strict": true,                          // Habilita todas as checagens de tipo mais rigorosas. É uma ótima prática!
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",              // Como o TS procura por módulos (padrão recomendado).
+
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true, // Garante consistência nos nomes dos arquivos (o erro que estávamos corrigindo).
+    "esModuleInterop": true,                 // Melhora a compatibilidade entre diferentes tipos de módulos.
+    "skipLibCheck": true                     // Pula a checagem de tipos em arquivos de bibliotecas (.d.ts).
+  }
+}
