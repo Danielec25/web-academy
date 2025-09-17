@@ -1,0 +1,62 @@
+# Ficheiros de configuração de ambiente. Nunca devem ir para o GitHub!
+.env
+
+# Pasta de dependências. É muito grande e pode ser reinstalada com "npm install".
+/ExpTS/node_modules/
+/express/node_modules/
+
+# Pasta com o código JavaScript compilado. É gerada automaticamente.
+/ExpTS/build/
+
+# Ficheiros do sistema operativo
+.DS_Store
+
+
+### **Passo 2: Criar o Repositório no GitHub**
+
+1.  Abra o seu navegador e vá para [github.com](https://github.com).
+2.  Clique no botão `+` no canto superior direito e selecione **"New repository"**.
+3.  Dê um nome ao seu repositório. O nome pedido no exercício original era `WACAD009-Express`.
+4.  Pode deixar a descrição em branco e certifique-se de que o repositório é **Público**.
+5.  **Não** marque nenhuma das caixas para adicionar um `README`, `.gitignore` ou licença. Queremos começar com um repositório vazio.
+6.  Clique em **"Create repository"**.
+
+### **Passo 3: Conectar e Enviar o seu Projeto**
+
+Depois de criar o repositório, o GitHub vai mostrar-lhe uma página com alguns comandos. Vamos usar a opção "...or push an existing repository from the command line".
+
+No seu terminal (ainda na pasta `WACAD009-Express`), execute os seguintes comandos, um de cada vez.
+
+1.  **Inicie o Git no seu projeto:**
+    ```bash
+    git init
+    ```
+
+2.  **Adicione todos os seus ficheiros (exceto os ignorados) para serem guardados:**
+    ```bash
+    git add .
+    ```
+
+3.  **Crie uma "fotografia" do seu projeto com uma mensagem descritiva:**
+    ```bash
+    git commit -m "Finaliza Exercícios 1 e 2 com Express e TypeScript"
+    ```
+
+4.  **Renomeie o ramo principal para `main` (boa prática):**
+    ```bash
+    git branch -M main
+    ```
+
+5.  **Conecte o seu projeto local ao repositório que criou no GitHub:**
+    * **Copie o URL da página do GitHub.** Será algo parecido com `https://github.com/SEU-USUARIO/WACAD009-Express.git`.
+    * Execute o comando abaixo, substituindo o URL pelo seu:
+    ```bash
+    git remote add origin https://github.com/SEU-USUARIO/WACAD009-Express.git
+    ```
+
+6.  **Envie os seus ficheiros para o GitHub:**
+    ```bash
+    git push -u origin main
+    ```
+
+E pronto! Se atualizar a página do seu repositório no GitHub, verá todos os seus ficheiros e pastas lá, organizados e prontos para serem partilhados.

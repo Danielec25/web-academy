@@ -1,0 +1,20 @@
+    <div class="container mt-4">
+        <h1>{{title}}</h1>
+        <div class="row">
+            <!-- Usamos o {{#each}} para fazer um loop em cada produto da lista -->
+            {{#each products}}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{this.image}}" class="card-img-top p-4" alt="{{this.title}}" style="height: 300px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{this.title}}</h5>
+                        <p class="card-text"><strong>Categoria:</strong> {{this.category}}</p>
+                        <p class="card-text"><strong>Preço:</strong> R$ {{this.price}}</p>
+                        <a href="/product/{{this.id}}" class="btn btn-primary mt-auto">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    
